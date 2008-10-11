@@ -1,0 +1,4 @@
+PyBoxController (any suggestions for a new name?) is a series of classes to
+provide easy access to wired usb xbox 360 controllers. USB communication uses
+libusb, so this should be available on most platforms (windows, linux, mac)
+with python installed.
