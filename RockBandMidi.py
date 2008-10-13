@@ -14,7 +14,6 @@ if __name__ == '__main__':
 
 
     midiout.openVirtualPort("Rock Band Drums")
-    note = 44
     def keyPressed(key_name):
         midiout.sendMessage(144,MIDI_SIGNALS[key_name],90)
 
