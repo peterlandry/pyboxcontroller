@@ -32,7 +32,8 @@ class Event:
     __len__  = getHandlerCount
 
 class RockBandDrumDevice(object):
-    filename = "003-1bad-0003-ff-ff"
+    idVendor = 7085
+    idProduct = 3
     interfaceSubclass = 93
     interfaceProtocol = 1
     endpointNumber = 1
@@ -55,7 +56,7 @@ class RockBandDrumDevice(object):
         for bus in busses:
             devices = bus.devices
             for dev in devices:
-                if dev.filename == self.filename:
+                if dev.idVendor == self.idVendor and dev.idProduct == self.idProduct:
                     self.device = dev
                     for config in self.device.configurations:
                         for intf in config.interfaces:
